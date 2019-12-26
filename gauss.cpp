@@ -39,7 +39,7 @@ std::vector<double> split_string_into_array(std::string str)
         int ind_of_space = str.find(' ');
         arr.push_back(stod(str.substr(0, ind_of_space)));
         str = str.substr(ind_of_space + 1, str.length() - ind_of_space);
-        if(str.length() == 1){
+        if(str.find(' ') == -1){
             if(str[0] != ' ')
                 arr.push_back(stod(str));
             break;
